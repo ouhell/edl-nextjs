@@ -1,0 +1,63 @@
+.Home {
+  display: flex;
+  justify-content: space-between;
+
+  .PostArea {
+    position: relative;
+
+    width: 100%;
+    padding: 0 5.5rem;
+
+    @media screen and (max-width: 1380px) {
+      padding: 0 1.5rem;
+    }
+
+    @media screen and (max-width: 980px) {
+      padding: 0 4.5rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 0 1.5rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding: 0 1rem;
+    }
+
+    .SvgHolder {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      z-index: 5;
+
+      width: 18px;
+      height: 35px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      @media screen and (max-width: 500px) {
+        left: 48%;
+      }
+    }
+
+    .PostsHolder {
+      width: 100%;
+      padding: 5rem 0;
+      padding-bottom: 1.5rem;
+
+      overflow-y: scroll;
+
+      @media screen and (max-width: 1380px) {
+        padding: 1.5rem 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 1.5rem 0;
+        padding-bottom: 0.6rem;
+      }
+    }
+  }
+}

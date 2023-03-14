@@ -1,0 +1,101 @@
+.SettingsMenu {
+  position: absolute;
+  right: 2.5rem;
+  top: 70px;
+  z-index: 15;
+
+  width: 300px;
+  padding: 0rem 1.5rem;
+
+  overflow: hidden;
+
+  background-color: var(--Secondary);
+  box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.55);
+  border: 1px solid var(--Dark);
+  border-radius: 0.2rem;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media screen and (max-width: 1280px) {
+    right: 1.5rem;
+  }
+
+  @media screen and (max-width: 870px) {
+    right: 1rem;
+  }
+
+  .Button {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.55rem 0.8rem;
+    margin: 1.2rem 0;
+
+    border-radius: 0.2rem;
+    background: linear-gradient(to right, var(--Dark), 40%, var(--Secondary));
+    border-left: 3px solid var(--PopRed);
+
+    cursor: pointer;
+
+    transition: 0.2s all ease-in-out;
+
+    .SvgHolder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 12px;
+      min-width: 12px;
+      height: max-content;
+      margin-right: 1rem;
+
+      svg {
+        width: 12px;
+        height: 12px;
+
+        path {
+          fill: var(--Mid);
+
+          transition: 0.2s all ease-in-out;
+        }
+      }
+    }
+
+    p {
+      font-size: 0.75rem;
+      font-weight: 400;
+
+      color: var(--Mid);
+
+      transition: 0.2s all ease-in-out;
+    }
+
+    &:hover {
+      background: linear-gradient(
+        to right,
+        var(--Dark),
+        100%,
+        var(--Secondary)
+      );
+
+      transform: translateY(-2px);
+
+      svg {
+        path {
+          fill: var(--Light);
+        }
+      }
+
+      p {
+        color: var(--Light);
+      }
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}

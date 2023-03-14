@@ -1,0 +1,193 @@
+.AuthPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--Primary);
+
+  @media screen and (max-height: 620px) {
+    justify-content: initial;
+
+    padding-top: 2rem;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    justify-content: initial;
+
+    height: 600px;
+    padding-top: 1.5rem;
+
+    .LogoHolder {
+      margin-bottom: 3rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .LogoHolder {
+    height: max-content;
+    margin-bottom: 2.5rem;
+
+    svg {
+      width: 150px;
+      height: max-content;
+
+      @media screen and (max-width: 450px) {
+        width: 130px;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .Form {
+    width: 92%;
+    max-width: 520px;
+    margin-bottom: 2rem;
+
+    .InputHolder {
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+
+      .TheInput {
+        width: 45%;
+      }
+    }
+
+    .Label {
+      display: block;
+
+      margin-bottom: 0.3rem;
+
+      color: var(--Mid);
+
+      font-size: 0.8rem;
+
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      span {
+        margin-left: 0.1rem;
+
+        color: var(--PopRed);
+        opacity: 0.8;
+      }
+    }
+
+    .Input {
+      display: block;
+
+      width: 100%;
+      height: 38px;
+      padding: 0 1rem;
+
+      outline: none;
+      border-radius: 0.2rem;
+      border: 1.2px solid var(--Dark);
+      background-color: var(--Primary);
+      color: var(--Mid);
+
+      transition: 0.2s all ease;
+    }
+
+    .CheckBox {
+      margin: 1.3rem 0;
+      margin-bottom: 1.5rem;
+
+      color: #525252;
+
+      font-size: 0.75rem;
+
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      a {
+        margin: 0 0.2rem;
+
+        color: #18b1a7;
+
+        text-decoration: underline;
+
+        &:hover {
+          color: #13857d;
+        }
+      }
+    }
+
+    button {
+      position: relative;
+
+      width: 100%;
+      height: 35px;
+      margin-top: 3rem;
+
+      border: none;
+      outline: none;
+      border-radius: 0.2rem;
+      background-color: var(--PopBlue);
+      color: var(--Light);
+
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+
+      cursor: pointer;
+
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 85%;
+      }
+    }
+
+    p {
+      margin-top: 1.3rem;
+      margin-bottom: 1rem;
+
+      color: #525252;
+
+      font-size: 0.78rem;
+
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      a {
+        margin-left: 0.2rem;
+
+        color: #18b1a7;
+
+        transition: 0.2s all ease;
+
+        &:hover {
+          color: #13857d;
+        }
+      }
+    }
+  }
+}

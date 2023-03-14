@@ -1,0 +1,443 @@
+.Post {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+
+  border-radius: 5px;
+  background-color: var(--Secondary);
+  border: 1.5px solid var(--Dark);
+
+  @media screen and (max-width: "500px") {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .Wrapper {
+    margin: 0 auto;
+  }
+}
+
+.Top {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  .Info {
+    display: flex;
+    align-items: center;
+
+    .Avatar {
+      width: 3rem;
+      min-width: 3rem;
+      height: 3rem;
+
+      background-color: var(--Primary);
+      border: 1px solid var(--Dark);
+      border-radius: 50%;
+
+      @media screen and (max-width: "450px") {
+        width: 2.5rem;
+        min-width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    .Line {
+      width: 1px;
+      height: 25px;
+      margin: 0 1rem;
+      margin-right: 1.3rem;
+
+      background-color: var(--MidDark);
+
+      @media screen and (max-width: "450px") {
+        margin: 0 0.8rem;
+      }
+    }
+
+    .TheInfo {
+      display: flex;
+      flex-direction: column;
+
+      .UserName {
+        margin-bottom: 0.3rem;
+
+        color: var(--Light);
+        font-size: 0.75rem;
+      }
+
+      .Time {
+        color: var(--Mid);
+
+        font-size: 0.65rem;
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+
+        span {
+          margin-left: 0.2rem;
+          color: var(--Light);
+
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .ArchiveButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+
+    background-color: var(--Primary);
+    border: 1px solid var(--Dark);
+    border-radius: 50%;
+
+    transition: 0.4s all ease;
+
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--MidDark);
+
+      path {
+        fill: var(--PopBlue);
+      }
+    }
+
+    svg {
+      width: 12px;
+      height: 12px;
+
+      path {
+        transition: 0.4s all ease;
+      }
+    }
+
+    .Selected {
+      border-color: var(--MidDark);
+
+      path {
+        fill: var(--PopBlue);
+      }
+    }
+  }
+}
+
+.Content {
+  width: 100%;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  border-bottom: 1.2px solid var(--Dark);
+
+  .Text {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  .ImageHolder {
+    width: 100%;
+    height: 250px;
+    margin-top: 1.5rem;
+
+    background-color: #28292e;
+    border-radius: 5px;
+  }
+}
+
+.Form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.75rem;
+
+  .Avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+
+    background-color: var(--Primary);
+    border: 1px solid var(--Dark);
+    border-radius: 50%;
+
+    @media screen and (max-width: "450px") {
+      display: none;
+    }
+  }
+
+  .Line {
+    width: 1px;
+    height: 25px;
+    margin: 0 1rem;
+    margin-right: 1.5rem;
+
+    background-color: var(--MidDark);
+
+    @media screen and (max-width: "450px") {
+      display: none;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 30px;
+    padding: 0 1rem;
+
+    border: none;
+    outline: 1px solid var(--Dark);
+    border-radius: 5rem;
+    background-color: var(--Primary);
+    color: var(--Mid);
+
+    font-size: 0.7rem;
+    font-weight: 400;
+
+    transition: 0.5s all ease;
+
+    &:hover {
+      outline: 1px solid var(--MidDark);
+    }
+
+    &:active {
+      outline: 1px solid var(--MidDark);
+    }
+  }
+
+  .SubmitButton {
+    min-width: 100px;
+    height: 30px;
+    margin-left: 1rem;
+
+    outline: 1px solid var(--Dark);
+    border-radius: 5rem;
+    background-color: var(--Primary);
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.2s all ease;
+
+    @media screen and (max-width: "500px") {
+      min-width: 50px;
+    }
+
+    @media screen and (max-width: "450px") {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      outline: 1px solid var(--MidDark);
+
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.CommentSection {
+  .Title {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.85rem;
+    word-spacing: 0.2rem;
+  }
+
+  .Comment {
+    display: flex;
+
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+
+    @media screen and (max-width: "450px") {
+      padding-left: 0.5rem;
+    }
+
+    .Avatar {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      margin-right: 1.2rem;
+
+      background-color: var(--Primary);
+      border: 1px solid var(--Dark);
+      border-radius: 50%;
+
+      @media screen and (max-width: "450px") {
+        margin-right: 0.8rem;
+      }
+    }
+
+    .CommentContent {
+      width: 100%;
+      height: max-content;
+
+      .Text {
+        padding-top: 0.2rem;
+        margin-bottom: 0.5rem;
+
+        font-size: 0.75rem;
+
+        span {
+          margin-right: 0.3rem;
+
+          color: var(--PopBlue);
+
+          font-weight: 600;
+        }
+      }
+
+      .ReplyButton {
+        display: flex;
+        align-items: center;
+
+        width: max-content;
+        padding: 0.5rem 0;
+        margin-bottom: 0.5rem;
+
+        font-size: 0.7rem;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: 0.2s all ease;
+
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+
+        .SvgHolder {
+          margin-left: 0.8rem;
+
+          svg {
+            fill: var(--Light);
+          }
+        }
+      }
+
+      .ReplyCommentsHolder {
+        width: 100%;
+
+        overflow: hidden;
+      }
+
+      .Form {
+        display: flex;
+        justify-content: initial;
+        align-items: center;
+
+        width: 100%;
+        margin-bottom: 0;
+        padding-left: 1.2rem;
+
+        @media screen and (max-width: "450px") {
+          padding-left: 0.6rem;
+        }
+
+        input {
+          width: 100%;
+          max-width: 400px;
+          height: 28px;
+          padding: 0 1rem;
+
+          border: none;
+          outline: 1px solid var(--Dark);
+          border-radius: 5rem;
+          background-color: var(--Primary);
+          color: var(--Mid);
+
+          font-size: 0.7rem;
+          font-weight: 400;
+
+          transition: 0.5s all ease;
+
+          &:hover {
+            outline: 1px solid var(--MidDark);
+          }
+
+          &:active {
+            outline: 1px solid var(--MidDark);
+          }
+        }
+
+        .SubmitButton {
+          min-width: 100px;
+          height: 28px;
+          margin-left: 1rem;
+
+          border: none;
+          outline: 1px solid var(--Dark);
+          border-radius: 5rem;
+          background-color: var(--Primary);
+
+          cursor: pointer;
+
+          transition: 0.2s all ease;
+
+          @media screen and (max-width: "500px") {
+            min-width: 50px;
+          }
+
+          @media screen and (max-width: "450px") {
+            margin-left: 0.5rem;
+          }
+
+          &:hover {
+            outline: 1px solid var(--MidDark);
+
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
+  }
+
+  .CommentsHolder {
+    width: 100%;
+
+    overflow: hidden;
+  }
+
+  .ViewAllButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding-top: 1rem;
+    margin-top: 0rem;
+
+    border-top: 1px solid var(--Dark);
+    color: var(--PopBlue);
+
+    font-size: 0.7rem;
+
+    cursor: pointer;
+
+    @media screen and (max-width: "500px") {
+      padding-bottom: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --Primary: #17181c;
+  --Secondary: #1e1f23;
+
+  --Light: #f5f5f5;
+  --Mid: #a1a3a7;
+  --MidDark: #484a58;
+  --Dark: #32323b;
+
+  --PopBlue: #2a86ff;
+  --PopRed: #ff2a2a;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  font-family: "Poppins";
+}
+
+.NoScroll::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  color: var(--Light);
+  background-color: var(--Primary);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  width: 100%;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  border-radius: 0.05rem;
+
+  transition: 0.2s all ease;
+}
+
+.ant-input-affix-wrapper {
+  height: 40px;
+  padding: 0 1rem;
+
+  border-radius: 0.2rem;
+  box-shadow: none;
+  outline: none;
+  border: 1.2px solid var(--Dark) !important;
+  background-color: var(--Primary) !important;
+
+  transition: 0.2s all ease;
+}
+
+.ant-input-affix-wrapper svg {
+  fill: var(--PopBlue) !important;
+}
+
+:where(.css-dev-only-do-not-override-1km3mtt).ant-input {
+  color: var(--Mid) !important;
+  background-color: var(--Primary) !important;
+}
+
+:where(.css-1km3mtt).ant-input {
+  color: var(--Mid) !important;
+  background-color: var(--Primary) !important;
+}
+
+.ant-input-affix-wrapper-focused {
+  border: 1.2px solid var(--Dark) !important;
+}
+
+.ant-input-affix-wrapper:hover {
+  border: 1.2px solid var(--Dark) !important;
+}

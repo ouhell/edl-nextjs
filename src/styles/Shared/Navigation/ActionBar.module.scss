@@ -1,0 +1,187 @@
+.ActionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 55px;
+  min-height: 55px;
+  padding: 1.5rem 2.5rem;
+
+  overflow: hidden;
+
+  background-color: var(--Secondary);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--Dark);
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media screen and (max-width: 1280px) {
+    padding: 1.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1.5rem 1rem;
+    padding-left: 0rem;
+  }
+
+  .LeftSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .MenuButton {
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      width: 55px;
+      height: 60px;
+
+      overflow: hidden;
+
+      border-right: 1px solid var(--Dark);
+
+      cursor: pointer;
+
+      svg {
+        width: 17px;
+        height: 17px;
+
+        fill: rgb(75, 75, 75);
+        opacity: 0.8;
+      }
+
+      @media screen and (max-width: 500px) {
+        display: flex;
+      }
+    }
+  }
+
+  .RightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .SvgHolder {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: max-content;
+      margin-left: 1.5rem;
+
+      &:hover {
+        svg {
+          fill: var(--PopBlue);
+        }
+
+        path {
+          fill: var(--PopBlue);
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+
+        fill: var(--MidDark);
+
+        transition: 0.2s all ease;
+
+        cursor: pointer;
+
+        path {
+          fill: var(--MidDark);
+
+          transition: 0.2s all ease;
+        }
+      }
+
+      .Pointer {
+        position: absolute;
+        left: 50%;
+        bottom: -205%;
+        transform: translateX(-50%);
+
+        svg {
+          width: 24px;
+
+          path {
+            fill: var(--PopBlue);
+            stroke: var(--PopBlue);
+          }
+        }
+      }
+    }
+
+    .Active {
+      svg {
+        fill: var(--PopBlue);
+      }
+
+      path {
+        fill: var(--PopBlue);
+      }
+    }
+
+    .Line {
+      width: 0.8px;
+      height: 1.4rem;
+      margin: 0 1.5rem;
+
+      background-color: var(--MidDark);
+
+      @media screen and (max-width: 500px) {
+        margin-right: 1rem;
+        margin-left: 1.3rem;
+
+        height: 55px;
+
+        background-color: var(--Dark);
+      }
+    }
+
+    .UserName {
+      padding: 0.3rem 1rem;
+      margin-right: 0.9rem;
+
+      color: var(--Light);
+      background-color: var(--Primary);
+      border-radius: 5rem;
+      border: 1px solid var(--Dark);
+
+      font-size: 0.6rem;
+
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+
+    .Avatar {
+      width: 2.2rem;
+      height: 2.2rem;
+
+      border-radius: 50%;
+      background-color: var(--Primary);
+      outline: 1px solid var(--Dark);
+
+      cursor: pointer;
+
+      transition: 0.5s all ease;
+
+      @media screen and (max-width: 870px) {
+        width: 2.1rem;
+        height: 2.1rem;
+      }
+
+      &:hover {
+        outline: 1px solid var(--MidDark);
+      }
+    }
+  }
+}
