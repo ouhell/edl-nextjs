@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 
+type WindowDimentions = {
+  windowHeight: number;
+  windowWidth: number;
+};
+
 export default function UseResize() {
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
-  const [windowHeight, setWindowHeight] = useState<number | null>(null);
-
+  const [dimentions, setDimentions] = useState<WindowDimentions>({
+    windowHeight: window.innerHeight,
+    windowWidth: window.innerWidth,
+  });
   const setWindowDimensions = () => {
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+    setDimentions({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth,
+    });
   };
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
-  }, []);
 
   useEffect(() => {
     window.addEventListener("resize", setWindowDimensions);
@@ -20,7 +23,7 @@ export default function UseResize() {
     return () => {
       window.removeEventListener("resize", setWindowDimensions);
     };
-  }, [windowWidth, windowHeight]);
+  }, []);
 
-  return { windowWidth, windowHeight };
+  return dimentions;
 }

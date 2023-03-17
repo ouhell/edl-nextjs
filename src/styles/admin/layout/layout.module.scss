@@ -1,0 +1,54 @@
+.Layout {
+  --primary-background: linear-gradient(
+    to right,
+    rgb(41, 54, 60),
+    rgb(55, 71, 79)
+  ); /* #17181c; */
+  --navbar-background: rgb(5 30 52);
+  --primary-contrast-background: #f6f7f9; /* linear-gradient(
+    to right,
+    rgb(41, 54, 60),
+    rgb(55, 71, 79)
+  ); */
+  --primary-icon: #f6f7f9;
+  --primary-contrast-icon: #476282;
+
+  --primary-color: #f6f7f9;
+
+  &[theme-mode="light"] {
+    --primary-background: #f6f7f9; /* #17181c; */
+    --navbar-background: rgb(5 30 52);
+    --primary-contrast-background: linear-gradient(
+      to right,
+      rgb(41, 54, 60),
+      rgb(55, 71, 79)
+    );
+
+    --primary-contrast-icon: #f6f7f9;
+    --primary-icon: rgb(41, 54, 60);
+    --primary-color: #1b3a57;
+  }
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--primary-background);
+
+  * {
+    font-family: "Roboto", monospace;
+  }
+
+  .Main {
+    height: 100%;
+    width: 100%;
+
+    .Content {
+      color: var(--primary-color);
+      height: 100%;
+      max-height: 100%;
+      width: 100%;
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+}

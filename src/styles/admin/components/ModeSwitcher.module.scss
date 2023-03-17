@@ -1,0 +1,31 @@
+.ModeSwitch {
+  width: 3.5rem;
+  height: 1.2rem;
+  padding: 0.2rem;
+  background: var(--primary-contrast-icon);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  .Icon {
+    width: 1rem;
+    color: var(--primary-icon);
+  }
+  .Ball {
+    position: absolute;
+
+    background-color: var(--primary-icon);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+
+    &[theme-mode="dark"] {
+      right: 5%;
+    }
+    &[theme-mode="light"] {
+      left: 5%;
+    }
+  }
+}

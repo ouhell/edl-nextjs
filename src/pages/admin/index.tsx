@@ -1,9 +1,13 @@
 import React from "react";
-import C from "@/styles/admin/index.module.scss";
+import C from "@/styles/admin/pages/index.module.scss";
 import AdminLayout from "@/components/admin/layout";
 
 const Admin = () => {
-  return <div className={C.Admin}></div>;
+  return (
+    <div className={C.Accounts}>
+      <section className={C.AccountsHolder}></section>
+    </div>
+  );
 };
 
 Admin.layout = AdminLayout;

@@ -1,0 +1,107 @@
+.NavBar {
+  // width: 16rem;
+  // min-width: 16rem;
+  height: 100vh;
+  z-index: 100;
+  color: #ffff;
+  background-color: var(--navbar-background);
+  transition: width 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  user-select: none;
+
+  .Header {
+    height: 3rem;
+    display: flex;
+    gap: 0.7rem;
+    padding: 1.1rem;
+    align-items: center;
+
+    .Icon {
+      color: orange;
+    }
+
+    .Title {
+      font-size: 1.3rem;
+      letter-spacing: -1px;
+      overflow: hidden;
+    }
+  }
+
+  .Main {
+    height: 100%;
+    .NavigationGroups {
+      padding: 0.1rem;
+      .NavigationGroup {
+        .ToggleTag {
+          border-radius: 2px;
+          display: flex;
+          justify-content: flex-start;
+          padding: 0.5rem 1.1rem;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 0.95rem;
+          cursor: pointer;
+          .GroupIdentidier {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .GroupTitle {
+              text-transform: capitalize;
+              font-weight: 500;
+            }
+          }
+          /*  &:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+          } */
+        }
+      }
+    }
+  }
+
+  .Icon {
+    cursor: pointer;
+  }
+
+  .Footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding: 1rem;
+  }
+
+  &.Mini {
+    .Header {
+      justify-content: center;
+      gap: 0;
+    }
+
+    .Main {
+      height: fit-content;
+
+      .NavigationGroups {
+        .NavigationGroup {
+          .ToggleTag {
+            justify-content: center;
+
+            .GroupIdentidier {
+              gap: 0;
+            }
+          }
+        }
+      }
+    }
+    .Footer {
+      justify-content: center;
+      height: 100%;
+      align-items: start;
+    }
+  }
+}
+
+.Separator {
+  height: 1px;
+  background: rgba(129, 129, 129, 0.2);
+}
